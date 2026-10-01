@@ -51,16 +51,17 @@ Clube_do_Focinho/
 │
 └── README.md
 Organização dos diretórios
-index.html — estrutura principal da aplicação e base da SPA.
-html/ — conteúdos específicos das páginas.
-css/ — folha de estilos do projeto.
-img/ — imagens utilizadas na aplicação.
-js/ — código JavaScript responsável pela interatividade e navegação.
-README.md — documentação do projeto.
+Arquivo/Diretório   Descrição
+index.html  Estrutura principal da aplicação e base da SPA.
+html/   Conteúdos específicos das páginas.
+css/    Folha de estilos do projeto.
+img/    Imagens utilizadas na aplicação.
+js/ Código JavaScript responsável pela interatividade e navegação.
+README.md   Documentação do projeto.
 🚀 Funcionalidades
 Navegação SPA
 
-A aplicação utiliza uma estrutura de Single Page Application, carregando o conteúdo das páginas sem realizar o recarregamento completo do documento.
+A aplicação utiliza uma estrutura de Single Page Application (SPA), carregando o conteúdo das páginas sem realizar o recarregamento completo do documento.
 
 O JavaScript utiliza fetch(), DOMParser() e manipulação do DOM para carregar o conteúdo correspondente dentro do elemento <main>.
 
@@ -72,9 +73,9 @@ Arrays de objetos;
 map();
 Template Literals;
 innerHTML;
-Elementos semânticos como <article>.
+Elementos semânticos, como <article>.
 
-Isso reduz a repetição de código e facilita a manutenção dos conteúdos.
+Essa abordagem reduz a repetição de código e facilita a manutenção dos conteúdos.
 
 Formulário de cadastro
 
@@ -95,7 +96,7 @@ Tipo de participação;
 Aceite dos termos.
 Responsividade
 
-O layout foi desenvolvido para diferentes tamanhos de tela, utilizando cinco breakpoints:
+O layout foi desenvolvido para diferentes tamanhos de tela utilizando exatamente cinco breakpoints:
 
 1100px
 900px
@@ -106,27 +107,27 @@ O layout foi desenvolvido para diferentes tamanhos de tela, utilizando cinco bre
 
 O projeto utiliza elementos semânticos do HTML5, como:
 
-<header>;
-<nav>;
-<main>;
-<section>;
-<article>;
-<aside>;
-<footer>;
-<form>.
+<header>
+<nav>
+<main>
+<section>
+<article>
+<aside>
+<footer>
+<form>
 
 Também são utilizados atributos como aria-label e aria-labelledby para melhorar a compreensão da estrutura da página por tecnologias assistivas.
 
 🌿 GitFlow
 
-O desenvolvimento do projeto foi organizado utilizando o modelo GitFlow.
+O desenvolvimento do projeto foi organizado utilizando o modelo GitFlow, separando a versão estável do desenvolvimento e das funcionalidades específicas.
 
 Branches utilizadas
 main
-│
-└── develop
-    │
-    └── feature/projetos-dinamicos
+  │
+  └── develop
+        │
+        └── feature/projetos-dinamicos
 main
 
 Contém a versão estável do projeto, destinada às versões de lançamento.
@@ -143,19 +144,18 @@ Após a conclusão, a funcionalidade foi integrada à branch develop e posterior
 
 📝 Conventional Commits
 
-O histórico utiliza o padrão Conventional Commits, facilitando a identificação das alterações realizadas.
+O histórico do projeto utiliza o padrão Conventional Commits, facilitando a identificação das alterações realizadas.
 
-Exemplos utilizados no projeto:
-
+Commits utilizados
 feat: cria estrutura inicial do projeto
 refactor: remove toast estático da página de projetos
-Principais tipos utilizados
-Tipo  Utilização
-feat  Nova funcionalidade
+Principais tipos
+Tipo    Utilização
+feat    Nova funcionalidade
 fix Correção de erro
-refactor  Reorganização ou melhoria do código
-style Alterações de estilo
-docs  Alterações na documentação
+refactor    Reorganização ou melhoria do código
+style   Alterações de estilo
+docs    Alterações na documentação
 🔖 Versionamento
 
 O projeto utiliza Versionamento Semântico (SemVer) no formato:
@@ -166,9 +166,10 @@ A primeira versão estável registrada foi:
 
 v1.0.0
 Significado
-MAJOR (1) — versão principal;
-MINOR (0) — novas funcionalidades compatíveis;
-PATCH (0) — correções compatíveis.
+Versão  Significado
+MAJOR (1)   Versão principal do projeto
+MINOR (0)   Novas funcionalidades compatíveis
+PATCH (0)   Correções compatíveis
 
 A versão v1.0.0 representa a primeira release estável registrada do projeto.
 
@@ -179,15 +180,20 @@ Primeira versão estável do Clube do Focinho, consolidando a estrutura inicial 
 
 ▶️ Como executar o projeto
 
-O projeto pode ser executado utilizando um servidor local, como o WampServer ou outra ferramenta de servidor local compatível.
+O projeto pode ser executado utilizando um servidor local, como o WampServer, ou outra ferramenta de servidor local compatível.
 
 Como a aplicação utiliza fetch() para carregar os conteúdos das páginas da SPA, recomenda-se executá-la através de um servidor local em vez de abrir o index.html diretamente pelo sistema de arquivos.
 
+Executando com WampServer
+Coloque a pasta Clube_do_Focinho dentro do diretório www do WampServer.
+Inicie o WampServer.
+Acesse o projeto pelo navegador através do servidor local.
+Utilize a navegação da aplicação para acessar as páginas disponíveis.
 👨‍💻 Controle de versão
 
 O projeto utiliza Git para controle de versão e GitHub para armazenamento remoto do repositório.
 
-Estrutura de desenvolvimento:
+A organização do desenvolvimento ocorreu seguindo o seguinte fluxo:
 
 main
   ↓
@@ -200,5 +206,6 @@ integração na develop
 integração na main
   ↓
 v1.0.0
+🐾 Clube do Focinho
 
-Clube do Focinho — Proteção, cuidado e bem-estar animal. 🐾
+Proteção, cuidado e bem-estar animal.
