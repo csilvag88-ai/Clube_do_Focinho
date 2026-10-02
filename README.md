@@ -10,56 +10,56 @@ Desenvolver uma aplicação web organizada, responsiva e acessível, utilizando 
 
 O projeto também tem como objetivo aplicar conceitos de:
 
-HTML semântico;
-CSS responsivo;
-JavaScript Vanilla;
-Manipulação do DOM;
-Aplicação de Página Única (SPA);
-Validação de formulários;
-Templates dinâmicos;
-Controle de versão com Git e GitHub;
-Metodologia GitFlow;
-Conventional Commits;
-Versionamento Semântico (SemVer).
-🛠️ Tecnologias Utilizadas
-HTML5 — estrutura semântica das páginas;
-CSS3 — estilização e responsividade;
-JavaScript (ES6+) — interatividade, manipulação do DOM e navegação SPA;
-Git — controle de versão;
-GitHub — hospedagem do repositório e gerenciamento das versões.
+HTML semântico;                                                                                                          
+CSS responsivo;                                                                                                           
+JavaScript Vanilla;                                                                                                       
+Manipulação do DOM;                                                                                                       
+Aplicação de Página Única (SPA);                                                                                          
+Validação de formulários;                                                                                                 
+Templates dinâmicos;                                                                                                      
+Controle de versão com Git e GitHub;                                                                                      
+Metodologia GitFlow;                                                                                                      
+Conventional Commits;                                                                                                     
+Versionamento Semântico (SemVer).                                                                                         
+🛠️ Tecnologias Utilizadas                                                                                                 
+HTML5 — estrutura semântica das páginas;                                                                                  
+CSS3 — estilização e responsividade;                                                                                      
+JavaScript (ES6+) — interatividade, manipulação do DOM e navegação SPA;                                                   
+Git — controle de versão;                                                                                                 
+GitHub — hospedagem do repositório e gerenciamento das versões.                                                           
 
 Não foram utilizados frameworks ou bibliotecas externas de JavaScript.
 
 📁 Estrutura do Projeto
-Clube_do_Focinho/
-│
-├── index.html
-│
-├── html/
-│   ├── home.html
-│   ├── projetos.html
-│   └── cadastro.html
-│
-├── css/
-│   └── style.css
-│
-├── img/
-│   └── animal.jpg
-│
-├── js/
-│   └── app.js
-│
-└── README.md
-Organização dos Diretórios
-Diretório/Arquivo   Descrição
-index.html  Estrutura principal da aplicação e base do SPA
-html/   Conteúdo específico das páginas
-css/    Folha de estilos do projeto
-img/    Imagens utilizadas na aplicação
-js/ Código JavaScript responsável pela interatividade e navegação
-README.md   Documentação do projeto
-🚀 Funcionalidades
-Navegação SPA
+Clube_do_Focinho/                                                                                                         
+│                                                                                                                         
+├── index.html                                                                                                            
+│                                                                                                                         
+├── html/                                                                                                                 
+│   ├── home.html                                                                                                         
+│   ├── projetos.html                                                                                                     
+│   └── cadastro.html                                                                                                     
+│                                                                                                                         
+├── css/                                                                                                                  
+│   └── style.css                                                                                                         
+│                                                                                                                         
+├── img/                                                                                                                  
+│   └── animal.jpg                                                                                                        
+│                                                                                                                         
+├── js/                                                                                                                   
+│   └── app.js                                                                                                            
+│                                                                                                                         
+└── README.md                                                                                                             
+Organização dos Diretórios                                                                                                
+Diretório/Arquivo   Descrição                                                                                            
+index.html  Estrutura principal da aplicação e base do SPA                                                                
+html/   Conteúdo específico das páginas                                                                                   
+css/    Folha de estilos do projeto                                                                                       
+img/    Imagens utilizadas na aplicação                                                                                   
+js/ Código JavaScript responsável pela interatividade e navegação                                                         
+README.md   Documentação do projeto                                                                                       
+🚀 Funcionalidades                                                                                                        
+Navegação SPA                                                                                                             
 
 A aplicação utiliza uma estrutura de Single Page Application (SPA), carregando o conteúdo das páginas sem realizar o recarregamento completo do documento.
 
@@ -69,46 +69,46 @@ Projetos Dinâmicos
 
 Os projetos são armazenados em uma estrutura de dados JavaScript e renderizados dinamicamente utilizando:
 
-Arrays de objetos;
-Método map();
-Template literals;
-innerHTML;
-Elementos semânticos como <article>.
+Arrays de objetos;                                                                                                        
+Método map();                                                                                                             
+Template literals;                                                                                                        
+innerHTML;                                                                                                                
+Elementos semânticos como <article>.                                                                                      
 
-Essa abordagem reduz a repetição de código e facilita a manutenção dos conteúdos.
+Essa abordagem reduz a repetição de código e facilita a manutenção dos conteúdos.                                         
+                                                                                                                           
+Formulário de Cadastro                                                                                                    
+                                                                                                                          
+O projeto possui um formulário para participação nas ações do Clube do Focinho, utilizando validações nativas do HTML5 e JavaScript.                                                                                                               
+                                                                                                                          
+Campos validados:                                                                                                         
+                                                                                                                          
+Nome;                                                                                                                     
+E-mail;                                                                                                                   
+CPF;                                                                                                                      
+Telefone;                                                                                                                 
+CEP;                                                                                                                      
+Data de nascimento;                                                                                                       
+Endereço;                                                                                                                 
+Estado;                                                                                                                   
+Cidade;                                                                                                                   
+Tipo de participação;                                                                                                     
+Aceite dos termos.                                                                                                        
+Responsividade                                                                                                            
+                                                                                                                           
+O layout foi desenvolvido para diferentes tamanhos de tela, utilizando cinco breakpoints:                                 
 
-Formulário de Cadastro
+1100px;                                                                                                                   
+900px;                                                                                                                    
+650px;                                                                                                                    
+480px;                                                                                                                    
+400px.                                                                                                                    
+♿ Acessibilidade e Semântica                                                                                             
 
-O projeto possui um formulário para participação nas ações do Clube do Focinho, utilizando validações nativas do HTML5 e JavaScript.
+O projeto utiliza elementos semânticos do HTML5, como:                                                                    
 
-Campos validados:
-
-Nome;
-E-mail;
-CPF;
-Telefone;
-CEP;
-Data de nascimento;
-Endereço;
-Estado;
-Cidade;
-Tipo de participação;
-Aceite dos termos.
-Responsividade
-
-O layout foi desenvolvido para diferentes tamanhos de tela, utilizando cinco breakpoints:
-
-1100px;
-900px;
-650px;
-480px;
-400px.
-♿ Acessibilidade e Semântica
-
-O projeto utiliza elementos semânticos do HTML5, como:
-
-<header>
-<nav>
+<header>                                                                                                                  
+<nav>                                                                                               
 <main>
 <section>
 <article>
