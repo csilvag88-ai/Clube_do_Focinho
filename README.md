@@ -116,6 +116,7 @@ O projeto utiliza elementos semânticos do HTML5, como:
 <footer>
 
 Também são utilizados atributos como aria-label e aria-labelledby para melhorar a acessibilidade e a navegação por tecnologias assistivas.
+O projeto também possui um Skip Link, permitindo que usuários que navegam pelo teclado pulem diretamente para o conteúdo principal da página, evitando a necessidade de percorrer novamente os elementos de navegação. A funcionalidade utiliza um link com foco visível e direcionamento para o elemento <main id="conteudo-principal">.
 
 🌿 GitFlow
 
