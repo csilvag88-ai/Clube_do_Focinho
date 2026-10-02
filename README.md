@@ -1,48 +1,87 @@
-🐾 Clube do Focinho
+============================================================
+                    CLUBE DO FOCINHO
+============================================================
 
-Projeto web desenvolvido para o Clube do Focinho, uma organização voltada à proteção, ao cuidado e ao bem-estar animal.
+Projeto acadêmico de desenvolvimento web voltado à criação de
+uma plataforma digital para uma organização não governamental
+(ONG) dedicada à proteção, cuidado e bem-estar animal.
 
-A aplicação apresenta informações sobre os projetos da organização e disponibiliza um formulário para cadastro de pessoas interessadas em participar das ações.
+O projeto foi desenvolvido com foco em HTML5 semântico, CSS3,
+JavaScript, responsividade, acessibilidade, experiência do
+usuário, organização de código e boas práticas de desenvolvimento
+web.
+
+------------------------------------------------------------
+1. OBJETIVO DO PROJETO
+------------------------------------------------------------
+
+O Clube do Focinho tem como objetivo apresentar uma interface
+digital para uma organização de proteção animal, permitindo:
+
+- Apresentar a organização e sua proposta;
+- Divulgar projetos e ações realizadas;
+- Incentivar a participação dos visitantes;
+- Disponibilizar formulário de cadastro;
+- Oferecer navegação simples e acessível;
+- Adaptar a interface para diferentes tamanhos de tela;
+- Trabalhar conceitos de desenvolvimento web moderno;
+- Utilizar uma arquitetura baseada em SPA (Single Page
+  Application);
+- Aplicar boas práticas de organização, desempenho e manutenção
+  do código.
 
 
-🎯 Objetivo
+------------------------------------------------------------
+2. TECNOLOGIAS UTILIZADAS
+------------------------------------------------------------
 
-Desenvolver uma aplicação web organizada, responsiva e acessível, utilizando tecnologias fundamentais de desenvolvimento front-end.
+HTML5
+- Estrutura semântica das páginas;
+- Elementos de acessibilidade;
+- Formulários com validação nativa;
+- Organização adequada do conteúdo.
 
-O projeto também tem como objetivo aplicar conceitos de:
+CSS3
+- Variáveis CSS;
+- Design System;
+- Flexbox;
+- CSS Grid;
+- Responsividade;
+- Media Queries;
+- Tema claro e tema escuro;
+- Transições e efeitos visuais.
 
-- HTML semântico;
-- CSS responsivo;
-- JavaScript Vanilla;
-- Manipulação do DOM;
-- Aplicação de Página Única (SPA);
-- Validação de formulários;
-- Templates dinâmicos;
-- Vite;
+JavaScript
+- Navegação dinâmica;
+- Funcionamento da SPA;
+- Carregamento dos conteúdos;
+- Menu responsivo;
+- Validação complementar do formulário;
+- Máscaras de CPF, telefone e CEP;
+- Alternância entre tema claro e escuro;
+- Utilização de localStorage.
+
+Vite
+- Servidor de desenvolvimento;
 - Build de produção;
-- Minificação de arquivos;
-- Otimização de imagens;
-- Controle de versão com Git e GitHub;
-- Metodologia GitFlow;
-- Conventional Commits;
-- Versionamento Semântico (SemVer).
+- Otimização dos arquivos;
+- Minificação do código;
+- Geração da pasta dist;
+- Preparação do projeto para publicação.
+
+ESBuild
+- Utilizado pelo Vite durante o processo de build;
+- Minificação e otimização dos arquivos JavaScript e CSS.
+
+WebP
+- Utilização de imagem otimizada no formato WebP;
+- Redução do tamanho dos arquivos;
+- Melhoria do desempenho de carregamento.
 
 
-🛠️ Tecnologias Utilizadas
-
-- HTML5 — estrutura semântica das páginas;
-- CSS3 — estilização e responsividade;
-- JavaScript (ES6+) — interatividade, manipulação do DOM e navegação SPA;
-- Vite — servidor de desenvolvimento e ferramenta de build para produção;
-- esbuild — minificação dos arquivos durante a build;
-- WebP — formato otimizado utilizado nas imagens;
-- Git — controle de versão;
-- GitHub — hospedagem do repositório e gerenciamento das versões.
-
-Não foram utilizados frameworks ou bibliotecas externas de JavaScript.
-
-
-📁 Estrutura do Projeto
+------------------------------------------------------------
+3. ESTRUTURA DO PROJETO
+------------------------------------------------------------
 
 Clube_do_Focinho/
 │
@@ -73,342 +112,633 @@ Clube_do_Focinho/
 └── README.txt
 
 
-Organização dos Diretórios
+------------------------------------------------------------
+4. ARQUITETURA SPA
+------------------------------------------------------------
 
-Diretório/Arquivo — Descrição
+O projeto utiliza o conceito de SPA (Single Page Application).
 
-index.html — Estrutura principal da aplicação e base do SPA
-html/ — Conteúdo específico das páginas
-public/ — Arquivos estáticos disponibilizados diretamente pelo Vite
-public/html/ — Templates carregados dinamicamente pelo SPA
-public/imagens/ — Imagens utilizadas na versão de produção
-css/ — Folha de estilos do projeto
-js/ — Código JavaScript responsável pela interatividade e navegação
-package.json — Configurações, scripts e dependências do projeto
-vite.config.js — Configuração da ferramenta Vite
-README.txt — Documentação do projeto
+A estrutura principal do site está concentrada no arquivo
+index.html, que contém os elementos compartilhados entre as
+páginas, como:
 
+- Cabeçalho;
+- Menu de navegação;
+- Controle de tema;
+- Área principal de conteúdo;
+- Rodapé.
 
-🚀 Funcionalidades
+O conteúdo específico de cada página é carregado dinamicamente
+por meio do JavaScript.
 
-Navegação SPA
+As páginas utilizadas são:
 
-A aplicação utiliza uma estrutura de Single Page Application (SPA), carregando o conteúdo das páginas sem realizar o recarregamento completo do documento.
+- home.html
+- projetos.html
+- cadastro.html
 
-O JavaScript utiliza os recursos fetch(), DOMParser() e manipulação do DOM para carregar dinamicamente o conteúdo dentro do elemento <main>.
+O arquivo app.js realiza o carregamento dos conteúdos através
+do método fetch(), inserindo o conteúdo correspondente dentro
+do elemento:
 
-As páginas são carregadas de acordo com a navegação realizada pelo usuário:
+#conteudo-principal
 
-- Início;
-- Projetos;
-- Cadastro.
+A navegação utiliza o atributo:
 
+data-page
 
-Projetos Dinâmicos
-
-Os projetos são armazenados em uma estrutura de dados JavaScript e renderizados dinamicamente utilizando:
-
-- Arrays de objetos;
-- Método map();
-- Template literals;
-- innerHTML;
-- Elementos semânticos como <article>.
-
-Essa abordagem reduz a repetição de código e facilita a manutenção dos conteúdos.
+permitindo identificar qual conteúdo deve ser carregado.
 
 
-Formulário de Cadastro
+------------------------------------------------------------
+5. NAVEGAÇÃO
+------------------------------------------------------------
 
-O projeto possui um formulário para participação nas ações do Clube do Focinho, utilizando validações nativas do HTML5 e JavaScript.
+O menu principal possui as seguintes opções:
 
-Campos validados:
+- Início
+- Projetos
+- Cadastro
 
-- Nome;
+A navegação é realizada sem a necessidade de recarregar toda
+a estrutura da página.
+
+O JavaScript identifica o atributo data-page presente nos links
+e carrega o conteúdo correspondente.
+
+
+------------------------------------------------------------
+6. DESIGN SYSTEM
+------------------------------------------------------------
+
+O projeto utiliza variáveis CSS para centralizar as principais
+definições visuais da interface.
+
+Principais cores utilizadas:
+
+--verde-escuro
+#214b38
+
+--verde
+#3d7655
+
+--verde-claro
+#dcebdd
+
+--laranja
+#e98745
+
+--laranja-escuro
+#cf6e31
+
+--creme
+#fffaf2
+
+--creme-escuro
+#f5ead9
+
+--texto
+#26352c
+
+--texto-suave
+#657168
+
+--borda
+#e5dfd4
+
+Também foram definidas variáveis para:
+
+- Largura máxima do conteúdo;
+- Raio das bordas;
+- Espaçamentos;
+- Tipografia;
+- Cores;
+- Elementos da interface.
+
+
+------------------------------------------------------------
+7. RESPONSIVIDADE
+------------------------------------------------------------
+
+O projeto foi desenvolvido utilizando uma estratégia de
+responsividade progressiva.
+
+Foram definidos exatamente cinco breakpoints:
+
+1100px
+900px
+650px
+480px
+400px
+
+Cada breakpoint adapta a interface de acordo com o espaço
+disponível.
+
+Entre os ajustes realizados estão:
+
+- Redimensionamento de elementos;
+- Alteração de grids;
+- Ajustes de espaçamento;
+- Adaptação da navegação;
+- Menu hamburguer;
+- Redimensionamento de imagens;
+- Ajustes de tipografia;
+- Organização dos conteúdos em telas menores.
+
+
+------------------------------------------------------------
+8. ACESSIBILIDADE
+------------------------------------------------------------
+
+O projeto utiliza recursos de acessibilidade, incluindo:
+
+- HTML semântico;
+- Hierarquia adequada de títulos;
+- Textos alternativos para imagens;
+- Labels associados aos campos de formulário;
+- Navegação por teclado;
+- Skip link;
+- Atributos ARIA quando necessários;
+- Contraste adequado entre elementos;
+- Estados visuais de interação;
+- Estrutura lógica de navegação.
+
+
+------------------------------------------------------------
+9. FORMULÁRIO DE CADASTRO
+------------------------------------------------------------
+
+A página de cadastro possui campos para coleta de informações
+do participante.
+
+Entre os campos estão:
+
+- Nome completo;
 - E-mail;
+- Data de nascimento;
 - CPF;
 - Telefone;
 - CEP;
-- Data de nascimento;
 - Endereço;
-- Estado;
 - Cidade;
-- Tipo de participação;
-- Aceite dos termos.
+- Estado;
+- Tipo de participação.
+
+O formulário utiliza recursos nativos do HTML5 para validação.
+
+Também são utilizadas máscaras e padrões para facilitar o
+preenchimento de informações como:
+
+- CPF;
+- Telefone;
+- CEP.
+
+O objetivo é reduzir erros de preenchimento e melhorar a
+experiência do usuário.
 
 
-Modo Claro e Escuro
+------------------------------------------------------------
+10. TEMA CLARO E TEMA ESCURO
+------------------------------------------------------------
 
-A aplicação possui suporte aos modos claro e escuro.
+O projeto possui dois temas visuais:
 
-A preferência selecionada pelo usuário é armazenada no localStorage, permitindo manter o tema escolhido durante novos acessos.
+- Modo claro;
+- Modo escuro.
 
-Quando não existe uma preferência salva, o sistema considera a preferência de aparência configurada no sistema operacional por meio de prefers-color-scheme.
+A preferência do usuário é armazenada utilizando localStorage.
 
+Quando não existe uma preferência previamente registrada, o
+sistema verifica a preferência de tema definida no sistema
+operacional através de:
 
-Responsividade
+prefers-color-scheme
 
-O layout foi desenvolvido para diferentes tamanhos de tela, utilizando cinco breakpoints:
-
-- 1100px;
-- 900px;
-- 650px;
-- 480px;
-- 400px.
-
-A estratégia responsiva adapta a estrutura, espaçamentos, tipografia, navegação e componentes para diferentes dispositivos.
-
-
-♿ Acessibilidade e Semântica
-
-O projeto utiliza elementos semânticos do HTML5, como:
-
-<header>
-<nav>
-<main>
-<section>
-<article>
-<form>
-<footer>
-
-Também são utilizados atributos como aria-label e aria-labelledby para melhorar a acessibilidade e a navegação por tecnologias assistivas.
-
-O projeto também possui um Skip Link, permitindo que usuários que navegam pelo teclado pulem diretamente para o conteúdo principal da página, evitando a necessidade de percorrer novamente os elementos de navegação.
-
-A funcionalidade utiliza um link com foco visível e direcionamento para o elemento:
-
-<main id="conteudo-principal">
+O tema é aplicado utilizando atributos no elemento html e
+variáveis CSS.
 
 
-⚡ Vite e Build de Produção
+------------------------------------------------------------
+11. MENU RESPONSIVO
+------------------------------------------------------------
 
-O projeto utiliza o Vite como ferramenta de desenvolvimento e build de produção.
+Em telas menores, a navegação principal é adaptada para um
+menu hamburguer.
 
-Durante o desenvolvimento, o Vite fornece um servidor local com atualização rápida dos arquivos.
+O menu utiliza:
 
-O projeto possui os seguintes scripts no package.json:
+- Checkbox;
+- Label;
+- CSS;
+- JavaScript quando necessário.
 
-
-npm run dev
-
-Inicia o servidor de desenvolvimento.
-
-
-npm run build
-
-Gera a versão otimizada para produção dentro da pasta dist/.
-
-
-npm run preview
-
-Executa uma prévia local da versão de produção gerada pelo Vite.
+A estrutura permite que o usuário acesse as páginas mesmo em
+dispositivos com telas menores.
 
 
-Configuração do Vite
+------------------------------------------------------------
+12. VITE
+------------------------------------------------------------
 
-A configuração principal está localizada em:
+O projeto utiliza o Vite como ferramenta de desenvolvimento e
+build.
+
+O Vite foi integrado ao projeto para:
+
+- Executar o servidor local;
+- Facilitar o desenvolvimento;
+- Realizar o build de produção;
+- Otimizar os arquivos;
+- Minificar os recursos;
+- Gerar a versão final do projeto.
+
+O projeto utiliza a versão do Vite definida no package.json.
+
+
+------------------------------------------------------------
+13. CONFIGURAÇÃO DO VITE
+------------------------------------------------------------
+
+O arquivo:
 
 vite.config.js
 
-O arquivo define a utilização da minificação durante a build:
+é utilizado para configurar o processo de build.
 
-import { defineConfig } from "vite";
-
-export default defineConfig({
-    build: {
-        minify: "esbuild"
-    }
-});
+A configuração atual utiliza o esbuild para minificação dos
+arquivos durante a geração da versão de produção.
 
 
-Minificação
+------------------------------------------------------------
+14. INSTALAÇÃO
+------------------------------------------------------------
 
-Durante a preparação da versão de produção, o Vite utiliza o esbuild para realizar a minificação dos arquivos processados.
-
-A minificação remove elementos desnecessários para a execução do código, como:
-
-- Espaços em branco;
-- Quebras de linha desnecessárias;
-- Comentários não necessários;
-- Outros caracteres que podem ser reduzidos sem alterar o funcionamento.
-
-O objetivo é reduzir o tamanho dos arquivos enviados ao navegador e, consequentemente, diminuir a quantidade de dados transferidos durante o carregamento da aplicação.
-
-
-Otimização de Imagens
-
-As imagens utilizadas pelo projeto também passaram por otimização.
-
-A imagem principal da aplicação foi convertida para o formato WebP.
-
-O WebP permite disponibilizar imagens com tamanho reduzido mantendo uma qualidade adequada para utilização na interface.
-
-
-🌿 GitFlow
-
-O desenvolvimento do projeto foi organizado utilizando o modelo GitFlow.
-
-
-Branches Utilizadas
-
-main
-│
-└── develop
-    │
-    └── feature/projetos-dinamicos
-
-
-main
-
-Contém a versão estável do projeto, destinada às versões de lançamento.
-
-
-develop
-
-Utilizada para concentrar o desenvolvimento antes da integração com a versão estável.
-
-
-feature/projetos-dinamicos
-
-Utilizada para desenvolver a funcionalidade de renderização dinâmica dos projetos.
-
-Após a conclusão, a funcionalidade foi integrada à branch develop e posteriormente à main.
-
-
-📝 Conventional Commits
-
-O histórico de commits utiliza o padrão Conventional Commits, facilitando a identificação das alterações realizadas.
-
-
-Exemplos:
-
-feat: cria estrutura inicial do projeto
-refactor: remove conteúdo estático da página de projetos
-fix: corrige validação do formulário
-docs: atualiza README
-
-
-Tipos Utilizados:
-
-feat — Nova funcionalidade
-fix — Correção de erro
-refactor — Reorganização ou melhoria do código
-style — Alterações visuais ou de formatação
-docs — Alterações na documentação
-
-
-🔖 Versionamento
-
-O projeto utiliza Versionamento Semântico (SemVer) no formato:
-
-MAJOR.MINOR.PATCH
-
-A primeira versão estável registrada foi:
-
-v1.0.0
-
-
-Significado:
-
-MAJOR (1) — mudanças incompatíveis;
-MINOR (0) — novas funcionalidades compatíveis;
-PATCH (0) — correções compatíveis.
-
-A versão v1.0.0 representa a primeira versão estável do projeto.
-
-
-📦 Lançamento da Versão 1.0.0
-
-Primeira versão estável do Clube do Focinho, consolidando:
-
-- Estrutura inicial da aplicação;
-- Navegação SPA;
-- Renderização dinâmica dos projetos;
-- Formulário de cadastro;
-- Organização do código;
-- Responsividade;
-- Acessibilidade;
-- Modo claro e escuro;
-- Integração com Vite;
-- Build de produção;
-- Minificação dos arquivos;
-- Otimização de imagens.
-
-
-▶️ Como Executar o Projeto
-
-Pré-requisitos
-
-É necessário ter o Node.js e o npm instalados no computador.
-
-
-Instalação das dependências
-
-Após clonar o repositório, execute:
+Para instalar as dependências do projeto, execute:
 
 npm install
 
 
-Executar em desenvolvimento
+------------------------------------------------------------
+15. EXECUÇÃO EM DESENVOLVIMENTO
+------------------------------------------------------------
+
+Para iniciar o servidor de desenvolvimento do Vite:
 
 npm run dev
 
-O Vite iniciará um servidor local para execução da aplicação.
-
-O endereço será apresentado no terminal, normalmente:
+Após iniciar o servidor, o Vite disponibiliza o projeto
+localmente através de um endereço semelhante a:
 
 http://localhost:5173/
 
 
-Gerar versão de produção
+------------------------------------------------------------
+16. BUILD DE PRODUÇÃO
+------------------------------------------------------------
+
+Para gerar a versão otimizada do projeto:
 
 npm run build
 
-O comando gera os arquivos otimizados dentro da pasta:
+O Vite cria a pasta:
 
 dist/
 
+Essa pasta contém os arquivos preparados para publicação.
 
-Visualizar a versão de produção
+Durante o processo de build são realizadas otimizações como:
 
-Após executar o build:
+- Minificação;
+- Organização dos arquivos;
+- Geração dos assets;
+- Otimização do código;
+- Preparação para produção.
+
+
+------------------------------------------------------------
+17. VISUALIZAÇÃO DO BUILD
+------------------------------------------------------------
+
+Depois de executar:
+
+npm run build
+
+é possível visualizar a versão de produção utilizando:
 
 npm run preview
 
-O Vite disponibilizará a versão de produção para testes locais.
+O comando inicia um servidor local para testar os arquivos
+gerados dentro da pasta dist.
 
 
-Execução alternativa
+------------------------------------------------------------
+18. OTIMIZAÇÃO DE IMAGENS
+------------------------------------------------------------
 
-Como a aplicação utiliza fetch() para carregar o conteúdo das páginas do SPA, também é possível utilizar outros servidores HTTP locais, como:
+As imagens do projeto também foram otimizadas.
 
-- WampServer;
-- XAMPP;
-- Live Server (VS Code);
-- Outros servidores HTTP compatíveis.
+Foi realizada a conversão da imagem principal para o formato:
 
-A abertura direta do arquivo index.html pode impedir o funcionamento correto da navegação dinâmica devido às restrições do navegador para requisições fetch() utilizando file://.
+WebP
 
+O formato WebP permite reduzir o tamanho do arquivo mantendo
+boa qualidade visual.
 
-👨‍💻 Controle de Versão
+A utilização de imagens otimizadas contribui para:
 
-O projeto utiliza Git para controle de versão e GitHub para armazenamento remoto do repositório.
-
-
-Fluxo de desenvolvimento:
-
-main
-↓
-develop
-↓
-feature/projetos-dinamicos
-↓
-integração na develop
-↓
-integração na main
-↓
-v1.0.0
+- Redução do tempo de carregamento;
+- Menor transferência de dados;
+- Melhor desempenho;
+- Melhor experiência do usuário.
 
 
-🐾 Clube do Focinho
+------------------------------------------------------------
+19. ORGANIZAÇÃO DOS ARQUIVOS PÚBLICOS
+------------------------------------------------------------
 
-Proteção, cuidado e bem-estar animal.
+A pasta public foi adicionada para armazenar arquivos que
+precisam ser disponibilizados diretamente pelo Vite.
+
+Dentro dela estão:
+
+public/html/
+
+Contendo os arquivos de conteúdo utilizados pela SPA.
+
+public/imagens/
+
+Contendo os recursos de imagem utilizados pelo projeto.
+
+Durante o build, esses arquivos são disponibilizados na versão
+final do projeto.
+
+
+------------------------------------------------------------
+20. VALIDAÇÃO HTML
+------------------------------------------------------------
+
+O código HTML foi submetido ao W3C Validator para verificar
+possíveis problemas estruturais.
+
+Durante o desenvolvimento foram identificados e corrigidos
+problemas relacionados a:
+
+- Hierarquia de títulos;
+- Elementos sem títulos;
+- Estrutura semântica;
+- Organização dos elementos;
+- Estrutura de header e footer;
+- Uso adequado de elementos HTML.
+
+Após as correções, o código foi reorganizado seguindo as boas
+práticas de HTML5 semântico.
+
+
+------------------------------------------------------------
+21. GRID E FLEXBOX
+------------------------------------------------------------
+
+O projeto utiliza CSS Grid e Flexbox de acordo com a necessidade
+de cada componente.
+
+CSS Grid é utilizado principalmente para:
+
+- Organização de áreas;
+- Cards;
+- Estruturas de conteúdo;
+- Layouts em colunas.
+
+Flexbox é utilizado principalmente para:
+
+- Alinhamento;
+- Navegação;
+- Botões;
+- Cabeçalho;
+- Rodapé;
+- Organização de elementos em linha ou coluna.
+
+
+------------------------------------------------------------
+22. GIT E CONTROLE DE VERSÃO
+------------------------------------------------------------
+
+O projeto utiliza Git para controle de versão.
+
+O repositório remoto é utilizado para armazenar o código-fonte
+e acompanhar a evolução do projeto.
+
+
+------------------------------------------------------------
+23. GITFLOW
+------------------------------------------------------------
+
+Durante o desenvolvimento foram considerados conceitos do
+GitFlow para organização das alterações.
+
+Branches podem ser utilizadas para separar:
+
+- Desenvolvimento;
+- Novas funcionalidades;
+- Correções;
+- Versões de produção.
+
+A branch principal representa a versão estável do projeto.
+
+
+------------------------------------------------------------
+24. CONVENTIONAL COMMITS
+------------------------------------------------------------
+
+Os commits seguem o padrão Conventional Commits.
+
+Exemplos utilizados:
+
+feat:
+Nova funcionalidade.
+
+fix:
+Correção de problema.
+
+build:
+Alterações relacionadas ao processo de build ou dependências.
+
+docs:
+Alterações na documentação.
+
+style:
+Alterações de formatação ou estilo sem mudança de lógica.
+
+refactor:
+Alteração estrutural sem mudança de comportamento.
+
+Exemplo:
+
+build: configura Vite e atualiza documentação
+
+
+------------------------------------------------------------
+25. VERSIONAMENTO
+------------------------------------------------------------
+
+O projeto utiliza o conceito de Semantic Versioning (SemVer).
+
+Formato:
+
+MAJOR.MINOR.PATCH
+
+Versão inicial:
+
+1.0.0
+
+MAJOR:
+Alterações incompatíveis com versões anteriores.
+
+MINOR:
+Novas funcionalidades compatíveis.
+
+PATCH:
+Correções e pequenos ajustes.
+
+
+------------------------------------------------------------
+26. PROCESSO DE PRODUÇÃO
+------------------------------------------------------------
+
+O processo de produção do projeto segue aproximadamente as
+seguintes etapas:
+
+1. Desenvolvimento dos arquivos HTML, CSS e JavaScript;
+
+2. Validação da estrutura HTML;
+
+3. Implementação da responsividade;
+
+4. Implementação da SPA;
+
+5. Implementação do tema claro e escuro;
+
+6. Implementação do formulário;
+
+7. Otimização das imagens;
+
+8. Configuração do Vite;
+
+9. Execução do build;
+
+10. Verificação dos arquivos gerados;
+
+11. Testes da versão de produção;
+
+12. Commit das alterações;
+
+13. Envio das alterações para o repositório Git.
+
+
+------------------------------------------------------------
+27. COMANDOS PRINCIPAIS
+------------------------------------------------------------
+
+Instalar dependências:
+
+npm install
+
+
+Executar em desenvolvimento:
+
+npm run dev
+
+
+Gerar build de produção:
+
+npm run build
+
+
+Visualizar build:
+
+npm run preview
+
+
+Verificar estado do Git:
+
+git status
+
+
+Adicionar alterações:
+
+git add .
+
+
+Criar commit:
+
+git commit -m "mensagem do commit"
+
+
+Enviar alterações para o GitHub:
+
+git push
+
+
+------------------------------------------------------------
+28. VERSÃO DE PRODUÇÃO
+------------------------------------------------------------
+
+A versão de produção é gerada pelo comando:
+
+npm run build
+
+Os arquivos finais são disponibilizados dentro da pasta:
+
+dist/
+
+Essa versão contém os arquivos otimizados para publicação.
+
+
+------------------------------------------------------------
+29. OBJETIVOS ACADÊMICOS
+------------------------------------------------------------
+
+O projeto tem como finalidade aplicar, de maneira prática,
+conceitos estudados durante o desenvolvimento acadêmico,
+incluindo:
+
+- HTML5;
+- CSS3;
+- JavaScript;
+- Design responsivo;
+- Design System;
+- Acessibilidade;
+- UX;
+- SPA;
+- Validação de código;
+- Otimização de imagens;
+- Build de produção;
+- Minificação;
+- Vite;
+- Git;
+- GitFlow;
+- Conventional Commits;
+- Semantic Versioning.
+
+
+------------------------------------------------------------
+30. CONSIDERAÇÕES FINAIS
+------------------------------------------------------------
+
+O Clube do Focinho foi desenvolvido buscando integrar
+estrutura semântica, organização visual, responsividade,
+acessibilidade, interatividade e boas práticas de desenvolvimento.
+
+A implementação do Vite permite que o projeto possua uma etapa
+de desenvolvimento e uma etapa de produção, possibilitando a
+geração de arquivos otimizados através do processo de build.
+
+A utilização de SPA, carregamento dinâmico de conteúdo,
+responsividade, tema claro e escuro, validação de formulários e
+otimização de imagens contribui para uma aplicação mais
+organizada, moderna e adequada aos requisitos do projeto.
+
+
+------------------------------------------------------------
+                    CLUBE DO FOCINHO
+              Proteção • Cuidado • Bem-estar
+------------------------------------------------------------
