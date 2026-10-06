@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/csilvag88-ai/Clube_do_Focinho#readme",
   "devDependencies": {
+    "esbuild": "^0.28.2",
     "vite": "^8.3.2"
   }
 }
