@@ -359,9 +359,9 @@ function renderizarProjetos() {
 const BASE = import.meta.env.BASE_URL;
  
 const paginas = {
-    home: `${BASE}html/home.html`,
-    projetos: `${BASE}html/projetos.html`,
-    cadastro: `${BASE}html/cadastro.html`
+    home: "public/html/home.html",
+    projetos: "public/html/projetos.html",
+    cadastro: "public/html/cadastro.html"
 };
 
 /* =========================================================
