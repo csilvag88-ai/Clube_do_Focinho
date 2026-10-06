@@ -45,23 +45,23 @@ ESTRUTURA DO PROJETO
 
 Clube_do_Focinho/
 
-├── index.html
-├── package.json
-├── package-lock.json
-├── vite.config.mjs
-├── README.md
-├── public/
-│   ├── html/
-│   │   ├── home.html
-│   │   ├── projetos.html
-│   │   └── cadastro.html
-│   └── img/
-│       └── animal.webp
-├── css/
-│   └── style.css
-├── js/
-│   └── app.js
-└── dist/
+├── index.html                                                                                                            
+├── package.json                                                                                                          
+├── package-lock.json                                                                                                     
+├── vite.config.mjs                                                                                                       
+├── README.md                                                                                                             
+├── public/                                                                                                               
+│   ├── html/                                                                                                             
+│   │   ├── home.html                                                                                                    
+│   │   ├── projetos.html                                                                                                
+│   │   └── cadastro.html                                                                                                
+│   └── img/                                                                                                             
+│       └── animal.webp                                                                                                 
+├── css/                                                                                                                
+│   └── style.css                                                                                                        
+├── js/                                                                                                                   
+│   └── app.js                                                                                                           
+└── dist/                                                                                                                 
 
 RESPONSIVIDADE
 
