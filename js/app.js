@@ -356,7 +356,8 @@ function renderizarProjetos() {
    PÁGINAS
    ========================================================= */
 
-const BASE = import.meta.env.BASE_URL;
+const BASE = "/Clube_do_Focinho/";
+ 
  
 const paginas = {
     home: "public/html/home.html",
