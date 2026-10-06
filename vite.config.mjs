@@ -1,7 +1,8 @@
 import { defineConfig } from "vite";
-
+ 
 export default defineConfig({
-    build: {
-        minify: "esbuild"
-    }
+  base: "/Clube_do_Focinho/",
+  build: {
+    minify: "esbuild"
+  }
 });
